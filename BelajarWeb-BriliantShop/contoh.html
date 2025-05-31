@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demo Lengkap CSS</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        color: #2c3e50;
+      }
+
+      .text-demo {
+        text-align: justify;
+        font-weight: 600;
+        font-style: italic;
+        text-transform: capitalize;
+        text-decoration: underline;
+        color: #34495e;
+        letter-spacing: 1px;
+        word-spacing: 5px;
+      }
+
+      .box-model-demo {
+        width: 300px;
+        height: 150px;
+        background-color: #e74c3c;
+        color: white;
+        border: 3px solid #c0392b;
+        padding: 20px;
+        margin: 20px auto;
+        box-sizing: border-box;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        transition: color 0.2 ease;
+      }
+
+      .box-model-demo:hover {
+        background-color: #8e44ad;
+        transform: scale(1.1) rotate(2deg);
+      }
+
+      .position-demo {
+        position: relative;
+        background: #2ecc71;
+        padding: 20px;
+        color: white;
+      }
+      .position-demo span {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #27ae60;
+        padding: 5px;
+      }
+
+      .display-demo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #3498db;
+        color: white;
+        padding: 10px;
+        margin: 20px 0;
+      }
+      .display-demo div {
+        padding: 10px;
+        background: #2980b9;
+        border-radius: 5px;
+      }
+
+      .transform-demo {
+        background: #9b59b6;
+        color: white;
+        width: 150px;
+        margin: 20px auto;
+        padding: 20px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+      }
+      .transform-demo:hover {
+        transform: rotate(10deg) scale(1.1);
+        background: #8e44ad;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 30px;
+      }
+      .grid-item {
+        background-color: #1abc9c;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      @media screen and (max-width: 600px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demo Properti CSS Lengkap</h1>
+
+    <h2>1. Teks</h2>
+    <p class="text-demo">
+      ini adalah contoh teks yang menggunakan berbagai properti teks css seperti
+      text-align, text-transform, font-style, text-decoration, dan lainnya.
+    </p>
+
+    <h2>2. Box Model</h2>
+    <div class="box-model-demo">
+      Ini contoh box dengan padding, margin, border, dan box-shadow.
+    </div>
+
+    <h2>3. Position</h2>
+    <div class="position-demo">
+      Elemen ini menggunakan position: relative.
+      <span>Absolute</span>
+    </div>
+
+    <h2>4. Display: Flex</h2>
+    <div class="display-demo">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </div>
+
+    <h2>5. Transform & Transition</h2>
+    <div class="transform-demo">Hover saya!</div>
+
+    <h2>6. Grid</h2>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,472 @@
+:root {
+  --red: red;
+  --light: white;
+  --dark: black;
+  --text: brown;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 7%;
+  background-color: var(--light);
+  border-bottom: 1px solid var(--dark);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 45px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.navbar .navbar-logo a {
+  font-size: 30px;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.navbar .navbar-logo a span {
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
+
+.navbar-nav a {
+  color: var(--dark);
+  font-size: 1.1rem;
+  margin: 0 0.8rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+  color: var(--text);
+}
+
+.navbar-info {
+  background-color: var(--dark);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-info h6 {
+  color: var(--light);
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+.navbar-info a {
+  color: var(--red);
+  font-size: 1rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.navbar-info a:hover {
+  transform: scale(1.1) translateY(-2px);
+}
+
+.hero {
+  background-image: url(beranda3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 10px;
+}
+
+.hero .content {
+  margin: 7rem 5rem;
+}
+
+.hero .content h3 {
+  font-family: "Playpen Sans Arabic", cursive;
+  font-size: 2rem;
+  color: var(--red);
+  margin: 1rem 5rem;
+}
+
+.hero .content h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  padding-bottom: 5px;
+  margin: 5px 10px;
+}
+
+.hero .content p {
+  font-size: 1rem;
+  line-height: 2;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.hero .content a {
+  display: inline-block;
+  color: var(--light);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--text);
+  text-decoration: none;
+}
+
+/* Mengatur tata letak kontainer fashion agar gambar sejajar dan responsif */
+.fashion {
+  display: flex; /* Menyusun elemen anak secara horizontal */
+  justify-content: center; /* Menempatkan elemen di tengah secara horizontal */
+  align-items: center; /* Menyejajarkan elemen secara vertikal */
+  gap: 20px; /* Memberi jarak antar gambar */
+  flex-wrap: wrap; /* Membuat baris baru jika layar sempit (responsif) */
+  margin: 20px; /* Memberi jarak di sekitar kontainer */
+}
+
+/* Gaya umum untuk setiap gambar beserta teksnya */
+.gambar {
+  position: relative; /* Agar elemen <a> di dalam bisa diposisikan absolut relatif ke sini */
+  width: 350px; /* Lebar tetap untuk gambar */
+  height: 350px; /* Tinggi tetap untuk gambar */
+  overflow: hidden; /* Menyembunyikan bagian yang melewati batas */
+}
+
+/* Gaya untuk gambar */
+.gambar img {
+  width: 100%; /* Gambar mengisi seluruh lebar kotak */
+  height: 100%; /* Gambar mengisi seluruh tinggi kotak */
+  object-fit: cover; /* Menjaga rasio gambar sambil mengisi kotak */
+  display: block; /* Menghilangkan spasi bawah gambar */
+  transition: transform 0.3s ease; /* Animasi halus saat gambar di-hover */
+}
+
+/* Gaya untuk teks link di atas gambar */
+.gambar a {
+  position: absolute; /* Agar bisa ditempatkan secara bebas dalam kotak */
+  top: 50%; /* Posisikan dari atas sebanyak 50% */
+  left: 50%; /* Posisikan dari kiri sebanyak 50% */
+  transform: translate(-50%, -50%); /* Geser balik agar teks pas di tengah */
+  font-family: "Poppins", sans-serif; /* Gunakan font Poppins */
+  color: white; /* Warna teks putih */
+  font-size: 28px; /* Ukuran huruf */
+  text-decoration: none; /* Hilangkan garis bawah pada link */
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  padding: 10px 20px; /* Spasi dalam teks */
+  border-radius: 8px; /* Sudut membulat */
+  transition: transform 0.3s ease; /* Animasi halus saat teks di-hover */
+  transform-origin: center; /* Perbesar dari tengah saat di-hover */
+}
+
+/* Saat kursor berada di atas gambar, perbesar sedikit */
+.gambar:hover img {
+  transform: scale(1.05); /* Gambar sedikit membesar */
+}
+
+/* Saat kursor berada di atas gambar, perbesar teks sedikit tanpa pindah posisi */
+.gambar:hover a {
+  transform: translate(-50%, -50%) scale(1.05); /* Tetap di tengah + sedikit membesar */
+}
+
+/* TRENDING PAGE */
+
+/* Trending Section - Gambar dengan ukuran seragam */
+.trending {
+  padding: 20px;
+  margin: 20px;
+}
+
+.trending h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 35px;
+  border-bottom: 1px solid var(--dark);
+}
+
+.trending .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.trending .row .gambar1 {
+  width: 200px;
+  height: auto; /*  biarkan tinggi menyesuaikan isi */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /*  susun isi secara vertikal */
+  align-items: center; /* buat teks rata tengah */
+  transition: transform 0.3s ease;
+}
+
+.trending .row .gambar1:hover {
+  transform: scale(1.1);
+}
+
+.trending .row .gambar1 a:hover {
+  color: var(--text);
+}
+
+.trending .row .gambar1 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.trending .row .gambar1 a {
+  margin-top: 5px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-size: 1rem; /* 💡 Ganti dari 5rem jadi 1rem agar ukuran teks wajar */
+}
+
+/* TESTIMONI PAGE */
+
+.testi {
+  padding: 50px;
+  margin: 50px 30px;
+  background-color: wheat;
+}
+
+.testi .testi-content {
+  width: 100%;
+  margin: auto;
+  padding: auto;
+}
+
+.testi h1,
+p {
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.testi .testi-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Atur container gambar dan teks testimonial agar sejajar secara horizontal */
+.testi .testi-img .testi-img-main {
+  display: flex; /* Mengaktifkan Flexbox */
+  align-items: center; /* Menyelaraskan item vertikal agar sejajar tengah */
+  justify-content: center; /* Posisikan semua isi ke tengah */
+  gap: 15px; /* Jarak antar gambar dan teks */
+  text-align: left; /* Supaya teks p berada di kiri dalam box-nya */
+}
+.testi {
+  padding: 50px;
+  margin: 50px 30px;
+  background-color: wheat;
+}
+
+.testi .testi-content {
+  width: 100%;
+  margin: auto;
+  padding: auto;
+}
+
+.testi h1,
+p {
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.testi {
+  padding: 50px;
+  margin: 50px 30px;
+  background-color: rgb(214, 203, 183);
+}
+
+.testi .testi-content {
+  width: 100%;
+  margin: auto;
+  padding: auto;
+}
+
+.testi h1 {
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 50px;
+}
+
+.testi .testi-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Atur container gambar dan teks testimonial agar sejajar secara horizontal */
+.testi .testi-img .testi-img-main {
+  display: flex; /* Mengaktifkan Flexbox */
+  align-items: center; /* Menyelaraskan item vertikal agar sejajar tengah */
+  justify-content: center; /* Posisikan semua isi ke tengah */
+  gap: 15px; /* Jarak antar gambar dan teks */
+  text-align: left; /* Supaya teks p berada di kiri dalam box-nya */
+}
+
+/* Tambahan opsional: mengatur ukuran gambar agar proporsional */
+.testi .testi-img-main img {
+  width: 80px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+.info-shop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+
+.info-shop .info-isi {
+  flex-wrap: wrap;
+}
+
+.info-shop .info-isi img {
+  height: 150px;
+  width: auto;
+  margin: 10px;
+}
+
+.info-shop .info-isi h2 {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+.info-shop .info-isi p {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.subscribe-news {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: rgb(15, 14, 14);
+  border-bottom: 1px solid rgb(87, 86, 86);
+}
+
+.subscribe-news .sub-new {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: var(--light);
+  font-size: 15px;
+}
+
+.subscribe-news .input-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.subscribe-news .input-email .btn-input {
+  padding: 20px;
+  width: 300px;
+}
+
+.subscribe-news .input-email .btn-submit {
+  padding: 20px;
+  background-color: var(--red);
+  color: var(--light);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-color: red;
+  font-size: 15px;
+}
+
+.subscribe-news .info-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease;
+  margin: 5px;
+}
+
+.subscribe-news .info-links a:hover {
+  color: var(--light);
+}
+
+/* INFO _ MAISON */
+
+.info-maison {
+  padding: 50px;
+  background-color: rgb(15, 14, 14);
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(87, 86, 86);
+}
+
+.info-maison .maison-logo a {
+  font-size: 30px;
+  color: var(--light);
+  text-decoration: none;
+}
+
+.info-maison .maison-logo a span {
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
+
+.info-maison .shop-men {
+  display: flex;
+  flex-direction: column; /* Ini yang bikin a ke bawah */
+  gap: 10px; /* (Opsional) kasih jarak antar link */
+}
+
+.info-maison .shop-men h5 {
+  color: var(--light);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+.info-maison .shop-men a {
+  color: gray;
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: black;
+}
+
+.footer .footer-isi {
+  color: var(--light);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+
+.footer .footer-isi p span {
+  color: var(--text);
+}
